@@ -1,0 +1,21 @@
+// Colors :
+
+:root{
+    --color-primary-blue: #2E4258;
+    --color-primary-white: #ffffff;
+    --color-secondary-blue: #1e2d3e;
+    --color-secondary-white: #ededed;
+    --color-primary-1: var(--color-primary-white);
+    --color-primary-2: var(--color-secondary-white);
+    --color-secondary: var(--color-primary-blue);
+
+}
+
+$color-primary-blue: #2E4258;
+$color-primary-white: #ffffff;
+$color-secondary-blue: #1e2d3e;
+$color-secondary-white: #ededed;
+
+$color-primary-1: var(--color-primary-1);
+$color-primary-2: var(--color-primary-2);
+$color-secondary: var(--color-secondary);
