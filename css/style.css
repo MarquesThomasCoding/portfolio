@@ -117,7 +117,7 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--color-primary-1);
+  background-color: var(--color-primary-2);
   z-index: 1;
 }
 .navbar--mobile__menu {
@@ -181,7 +181,7 @@ body {
 }
 @media screen and (max-width: 700px) {
   .about-me {
-    margin-top: 100px;
+    margin-top: 90px;
   }
 }
 .about-me__title {
@@ -201,7 +201,7 @@ body {
   align-items: center;
   height: 100vh;
   gap: 124px;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.4s ease-in-out;
   opacity: 0;
 }
 @media screen and (max-width: 1040px) {
@@ -235,6 +235,11 @@ body {
   background-color: var(--color-secondary);
   color: var(--color-primary-1);
   border-radius: 20px 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 @media screen and (max-width: 600px) {
   .about-me__presentation__text {
@@ -242,27 +247,22 @@ body {
     border-radius: 0;
   }
 }
-.about-me svg {
-  position: absolute;
-  bottom: -45%;
-  width: 70%;
-  height: 100%;
-  fill: var(--color-primary-2);
+.about-me__presentation__cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  font-size: 16px;
+  color: var(--color-secondary);
+  background-color: var(--color-primary-1);
+  width: fit-content;
+  padding: 0.5em 1em;
+  border-radius: 15px;
 }
-.about-me svg:nth-child(1) {
-  left: 0;
-  opacity: 0.5;
-  z-index: -1;
-}
-.about-me svg:nth-child(2) {
-  left: 50%;
-  opacity: 0.5;
-  z-index: -1;
-}
-@media screen and (max-width: 700px) {
-  .about-me svg {
-    display: none;
-  }
+.about-me__presentation__cv svg, .about-me__presentation__cv path {
+  width: 1em;
+  height: 1em;
+  fill: var(--color-secondary);
 }
 
 .projects {
