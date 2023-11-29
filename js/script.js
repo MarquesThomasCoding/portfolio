@@ -139,3 +139,16 @@ if(window.innerWidth > 700){
         }
     });
 }
+
+
+
+// Scroll to
+
+const scrollToElement = (id) => {
+    const element = document.getElementById(id);
+    const topPos = element.offsetTop;
+    window.scrollTo({
+      top: topPos,
+      behavior: 'smooth'
+    });
+  }

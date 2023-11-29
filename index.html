@@ -22,16 +22,16 @@
     </div>
 
     <nav class="navbar">
-        <div class="navbar__logo">
+        <a onclick="scrollToElement('about')" class="navbar__logo">
             <div class="navbar__logo__firstname"><strong>Thomas</strong></div>
             <div class="navbar__logo__lastname">Marques</div>
-        </div>
+        </a>
         <ul class="navbar__menu">
-            <li class="navbar__menu__item"><a href="#about">A propos</a></li>
-            <li class="navbar__menu__item"><a href="#projects">Projets</a></li>
-            <li class="navbar__menu__item"><a href="#formation">Formation</a></li>
-            <li class="navbar__menu__item--button"><a href="#contact">Contact</a></li>
-            <li class="navbar__menu__item--mode">
+            <li class="navbar__menu__item"><a onclick="scrollToElement('projects')">Projets</a></li>
+            <li class="navbar__menu__item"><a onclick="scrollToElement('formation')">Formation</a></li>
+            <li class="navbar__menu__item--button"><a onclick="scrollToElement('contact')">Contact</a></li>
+            <li class="navbar__menu__item--button-2"><a href="./files/CV_Marques_Thomas_122023.pdf">CV</a></li>
+            <li class="navbar__menu__item">
                 <div class="navbar__menu__item--mode">
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                     width="1280.000000pt" height="1280.000000pt" viewBox="0 0 1280.000000 1280.000000"
