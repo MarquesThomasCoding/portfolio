@@ -139,6 +139,12 @@ body {
   color: var(--color-secondary);
   cursor: pointer;
 }
+.navbar--mobile__menu__item--mode svg {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  fill: var(--color-secondary);
+}
 
 .section {
   position: relative;

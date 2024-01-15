@@ -1,4 +1,4 @@
-const modeButton = document.querySelector('.navbar__menu__item--mode');
+const modeButton = document.querySelectorAll('.mode-btn');
 const modeIcon = document.querySelector('.navbar__menu__item--mode svg');
 
 // Si le mode n'a jamais été activé, on initialise la variable modeActivated à false, sinon, on le met soit à true soit à false en fonction de la valeur de localStorage
@@ -29,23 +29,25 @@ else {
     modeIcon.style.setProperty('fill', 'var(--color-primary-white)');
 }
 
-modeButton.addEventListener('click', () => {
-    if(!modeActivated){
-        document.documentElement.style.setProperty('--color-primary-1', 'var(--color-primary-white)');
-        document.documentElement.style.setProperty('--color-primary-2', 'var(--color-secondary-white)');
-        document.documentElement.style.setProperty('--color-secondary', 'var(--color-primary-blue)');
-       modeIcon.style.setProperty('fill', 'var(--color-primary-blue)');
-        modeActivated = true;
-    }
-    else {
-        document.documentElement.style.setProperty('--color-primary-1', 'var(--color-primary-blue)');
-        document.documentElement.style.setProperty('--color-primary-2', 'var(--color-secondary-blue)');
-        document.documentElement.style.setProperty('--color-secondary', 'var(--color-primary-white)');
-        modeIcon.style.setProperty('fill', 'var(--color-primary-white)');
-        modeActivated = false;
-    }
-    window.location.reload();
-    localStorage.setItem('modeActivated', modeActivated);
+modeButton.forEach(btn => {
+    btn.addEventListener('click', () => {
+        if(!modeActivated){
+            document.documentElement.style.setProperty('--color-primary-1', 'var(--color-primary-white)');
+            document.documentElement.style.setProperty('--color-primary-2', 'var(--color-secondary-white)');
+            document.documentElement.style.setProperty('--color-secondary', 'var(--color-primary-blue)');
+            modeIcon.style.setProperty('fill', 'var(--color-primary-blue)');
+            modeActivated = true;
+        }
+        else {
+            document.documentElement.style.setProperty('--color-primary-1', 'var(--color-primary-blue)');
+            document.documentElement.style.setProperty('--color-primary-2', 'var(--color-secondary-blue)');
+            document.documentElement.style.setProperty('--color-secondary', 'var(--color-primary-white)');
+            modeIcon.style.setProperty('fill', 'var(--color-primary-white)');
+            modeActivated = false;
+        }
+        window.location.reload();
+        localStorage.setItem('modeActivated', modeActivated);
+    });
 });
 
 
